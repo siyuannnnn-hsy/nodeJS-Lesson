@@ -1,10 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-
 console.log("创建文件夹：");
+
 process.stdin.on("data",function(data){
     var cmd = data.toString();
     var cmdArr = cmd.split(" ");
+    console.log(cmdArr);
     switch(cmdArr[0]){
         case "mkdir":
             fs.mkdirSync(cmdArr[1].slice(0,-2));
